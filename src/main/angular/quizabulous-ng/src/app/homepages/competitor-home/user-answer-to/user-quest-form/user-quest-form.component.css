@@ -1,0 +1,18 @@
+.quest-text {
+    margin: 5px 10px;
+    border: 2px solid grey;
+    padding: 2px;
+    text-align: justify;
+}
+
+.answer-options {
+    display: block;
+}
+
+.answer-option {
+    clear: both;
+    width: calc(100% - 22px);
+    margin: 15px 10px;
+    padding: 1px;
+    border: 1px solid lightgray;
+}

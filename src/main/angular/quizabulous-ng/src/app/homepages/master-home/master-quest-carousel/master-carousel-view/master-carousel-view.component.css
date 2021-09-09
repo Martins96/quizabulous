@@ -1,0 +1,24 @@
+div, span {
+    font-family: NormalText;
+    font-size: 1em;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.question {
+    font-style: italic;
+}
+
+.answers {
+    display: block;
+    width: 100%;
+}
+
+.answers div {
+    width: 100%;
+    clear: both;
+    padding: 2px;
+    border-top: 1px solid black;
+}

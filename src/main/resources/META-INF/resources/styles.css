@@ -1,0 +1,23 @@
+html, body {
+    margin: 0;
+}
+
+@font-face {
+    font-family: Title;
+    src: url('ProtoPixel.ttf');
+}
+
+@font-face {
+    font-family: NormalText;
+    font-size: 1.2em;
+    src: url('rainyhearts.ttf');
+}
+
+@font-face {
+    font-family: Subtitle;
+    font-size: 1.2em;
+    src: url('Minitel.ttf');
+}
+
+
+/*# sourceMappingURL=styles.css.map*/

@@ -1,0 +1,9 @@
+<div class="container">
+    <div *ngIf="!quest">
+        <h3>In attesa del Master {{ loadingDots }}</h3>
+    </div>
+    <div *ngIf="quest">
+        <h3>Nuova quest disponibile</h3>
+        <app-user-quest-form [quest]="quest" [jwt]="jwt" (answered)="answered($event)"></app-user-quest-form>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+.container {
+    background-image: url("/assets/img/login-bg.jpg");
+    background-repeat: repeat;
+    height: 100vh
+}
+
+.form-title {
+    font-family: Title;
+    font-size: 2em;
+}
+
+.login-form {
+    position: absolute;
+    top:10%; 
+    left:10%; 
+    right:0; 
+    bottom:0;
+}
+.form-container {
+    display: grid;
+    padding: 5% 2%;
+    background-color: rgba(120, 120, 120, 0.5);
+    width: fit-content;
+}
+
+.login-form input,
+.login-form label,
+.login-form button {
+    max-width: 175px;
+    min-height: 25px;
+    margin: 15px 0;
+}
+
+.login-form input,
+.login-form button {   
+    font-family: Subtitle;
+}

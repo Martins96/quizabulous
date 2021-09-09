@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="show-component" (click)="showHide()">
+        <span [innerHTML]="titleText()"></span>
+        <div class="triangle">
+            <svg height="15" width="15" class="triangle-svg" [ngClass]="{'rotate-triangle': !isVisible}">
+                <polygon points="6,1 2,10 10,10"/>
+                Sorry, your browser does not support inline SVG.
+            </svg>
+        </div>
+    </div>
+    <div class="contents" [ngClass]="{'hide': !isVisible}">
+        <div class="navigation-menu">
+            <button class="move-left" [disabled]="decreaseDisabled()" (click)="decrease()"><</button>
+            <span>{{ currentId }} / {{ maxQuests }}</span>
+            <div class="go-to-elem">
+                <input type="text" name="selectedId" id="selectedId" (keyup)="inputCheck()" />
+                <button class="by-id-btn" (click)="getQuestSelected()">vai</button>
+            </div>
+            <button class="move-right" [disabled]="increaseDisabled()" (click)="increase()">></button>
+        </div>
+        <div class="carousel-elem" *ngIf="questSelected">
+            <app-master-carousel-view [quest]="questSelected"></app-master-carousel-view>
+        </div>
+    </div>
+</div>

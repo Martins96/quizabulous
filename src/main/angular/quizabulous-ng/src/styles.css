@@ -1,0 +1,20 @@
+html, body {
+    margin: 0;
+}
+
+@font-face {
+    font-family: Title;
+    src: url("assets/fonts/ProtoPixel.ttf");
+}
+
+@font-face {
+    font-family: NormalText;
+    font-size: 1.2em;
+    src: url("assets/fonts/rainyhearts.ttf");
+}
+
+@font-face {
+    font-family: Subtitle;
+    font-size: 1.2em;
+    src: url("assets/fonts/Minitel.ttf");
+}

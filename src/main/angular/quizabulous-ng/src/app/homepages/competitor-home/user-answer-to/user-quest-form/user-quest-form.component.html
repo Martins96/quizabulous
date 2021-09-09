@@ -1,0 +1,29 @@
+<div class="container">
+    <form (ngSubmit)="submitAnswer()">
+        <div class="quest-text">
+            <span [innerHTML]="quest.question"></span>
+        </div>
+        <div class="answer-options">
+            <div class="answer-option">
+                <input type="radio" name="answer" value="1" [(ngModel)]="answer" />
+                <label for="answer1" [innerHTML]="quest.answer1"></label>
+            </div>
+            <div class="answer-option">
+                <input type="radio" name="answer" value="2" [(ngModel)]="answer" />
+                <label for="answer2" [innerHTML]="quest.answer2"></label>
+            </div>
+            <div class="answer-option">
+                <input type="radio" name="answer" value="3" [(ngModel)]="answer" />
+                <label for="answer3" [innerHTML]="quest.answer3"></label>
+            </div>
+            <div class="answer-option">
+                <input type="radio" name="answer" value="4" [(ngModel)]="answer" />
+                <label for="answer4" [innerHTML]="quest.answer4"></label>
+            </div>
+        </div>
+        <div class="submit-btn">
+            <button type="submit">Invia risposta</button>
+        </div>
+    </form>
+</div>
+

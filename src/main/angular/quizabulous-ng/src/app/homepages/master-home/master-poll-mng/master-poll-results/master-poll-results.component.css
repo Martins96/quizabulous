@@ -1,0 +1,15 @@
+h3 {
+    font-family: Subtitle;
+    font-size: 0.8em;
+}
+
+.competitor-answers {
+    display: flex;
+    border: 1px solid darkgray;
+    background-color: lightgray;
+    margin: 10px 0;
+}
+
+.competitor-answer {
+    margin: auto;
+}

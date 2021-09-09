@@ -1,0 +1,7 @@
+
+<div *ngIf="getJWT()">
+  <app-logged-user></app-logged-user>
+</div>
+<div *ngIf="!getJWT()">
+  <app-home-login></app-home-login>
+</div>

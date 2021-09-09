@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="show-component" (click)="showHide()">
+        <span [innerHTML]="titleText()"></span>
+        <div class="triangle">
+            <svg height="15" width="15" class="triangle-svg" [ngClass]="{'rotate-triangle': !isVisile}">
+                <polygon points="6,1 2,10 10,10"/>
+                Sorry, your browser does not support inline SVG.
+          </svg>
+        </div>
+    </div>
+    <!------------->
+    <div class="contents" [ngClass]="{'hide': !isVisile}">
+        <form class="custom-quest-form" (ngSubmit)="sendCustomQuest()">
+            <div class="form-container">
+                <div class="quest">
+                    <label>Quest personalizzata:</label>
+                    <textarea id="quest" name="questField" [(ngModel)]="questField" class="quest-field" ></textarea>
+                </div>
+                <div class="answers">
+                    <span>Risposte proposte:</span>
+                    <div>
+                        <label for="answer1" class="a1lbl">1</label>
+                        <input id="answer1" name="answer1" [(ngModel)]="answer1" class="answer1"/>
+                    </div>
+                    <div>
+                        <label for="answer2" class="a2lbl">2</label>
+                        <input id="answer2" name="answer2" [(ngModel)]="answer2" class="answer2"/>
+                    </div>
+                    <div>
+                        <label for="answer3" class="a3lbl">3</label>
+                        <input id="answer3" name="answer3" [(ngModel)]="answer3" class="answer3"/>
+                    </div>
+                    <div>
+                        <label for="answer4" class="a4lbl">4</label>
+                        <input id="answer4" name="answer4" [(ngModel)]="answer4" class="answer4"/>
+                    </div>
+                </div>
+                <div class="correct-answer">
+                    <label>Correct answer is:</label>
+                    <select id="correctAnswer" name="correctAnswer" [(ngModel)]="correctAnswer">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+            </div>
+            <div class="submit">
+                <button type="submit" class="submit-btn">Invia quest personalizzata</button>
+            </div>
+        </form>
+    </div>
+</div>

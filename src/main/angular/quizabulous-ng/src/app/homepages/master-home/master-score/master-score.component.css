@@ -1,0 +1,67 @@
+div, span, table, td, tr, button {
+    font-family: NormalText;
+    font-size: 1.1em;
+}
+
+.container {
+    box-shadow: 0 0 10px black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.triangle {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.triangle-svg {
+    transition-duration: 0.5s;
+    transition-property: transform;
+}
+
+.show-component {
+    display: flex;
+    border-radius: 5px;
+    background-color: lightgray;
+}
+
+.container {
+    animation-duration: 4s;
+}
+
+.contents {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.rotate-triangle {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+
+
+/* Table */
+
+.contents table {
+    width: 100%;
+}
+
+.contents table td {
+    border-top: 1px black solid;
+}
+
+.refresh-btn {
+    width: 100%;
+    margin: 5px 0;
+    padding: 5px 0;
+    background-color: lightskyblue;
+    border: none;
+}
+
+.refresh-btn:active {
+    background-color: cyan;
+}

@@ -1,0 +1,40 @@
+.toolbar {
+    width: 100%;
+    display: inline-flex;
+    margin: 0;
+    margin-bottom: 10px;
+    background-image: url("/assets/img/login-bg.jpg");
+    background-repeat: repeat-x;
+    background-position: top;
+}
+
+.toolbar div,
+.toolbar button,
+.toolbar label {
+    font-family: Title;
+    font-size: 1.5em;
+}
+
+.toolbar .title {
+    margin: auto 10px;
+    width: fit-content;
+}
+
+.toolbar .exit-btn {
+
+    margin-left: auto;
+    padding-left: 5px;
+    height: 50px;
+    width: fit-content;
+}
+.exit-btn button {
+    height: 100%;
+    border: none;
+    background-color: rgba(120, 120, 120, 0.5);
+    padding: 0 10px;
+    transition: all 0.2s linear;
+}
+
+.exit-btn button:active {
+    background-color: rgba(120, 120, 120);
+}

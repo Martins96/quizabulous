@@ -1,0 +1,100 @@
+div, span, label, input, textarea, button {
+    font-family: NormalText;
+    font-size: 1.1em;
+}
+
+.container {
+    box-shadow: 0 0 10px black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.triangle {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.triangle-svg {
+    transition-duration: 0.5s;
+    transition-property: transform;
+}
+
+.show-component {
+    display: flex;
+    border-radius: 5px;
+    background-color: lightgray;
+}
+
+.container {
+    animation-duration: 4s;
+}
+
+.contents {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.rotate-triangle {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+
+
+/* FORM */
+
+.form-container {
+    display: grid;
+    padding: 5% 2%;
+}
+
+.quest-field {
+    width: calc(100% - 6.5px);
+    height: 100px;
+    text-align: start;
+    text-orientation: upright;
+}
+
+.answers input {
+    width: 95%;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.answers label {
+    width: 5%;
+    min-width: 10px;
+    font-size: 1em;
+}
+.answers div {
+    width: 100%;
+    display: inline-flex;
+}
+
+.answer2, .answer4 {
+    background-color: lightgray;
+}
+
+.correct-answer {
+    width: calc(100% - 12px);
+    display: flex;
+    padding: 5px;
+    border: 1px solid grey;
+}
+
+.correct-answer select {
+    margin-left: auto;
+    height: 25px;
+}
+
+.submit {
+    display: flex;
+    width: 100%;
+}
+
+.submit-btn {
+    margin: 10px auto;
+}

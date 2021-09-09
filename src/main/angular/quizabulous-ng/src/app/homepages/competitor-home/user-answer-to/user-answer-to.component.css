@@ -1,0 +1,11 @@
+h3 {
+    font-family: Subtitle;
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+div, span, input, button, textarea, select, label {
+    font-family: NormalText;
+    font-size: 1.2em;
+}

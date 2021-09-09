@@ -1,0 +1,17 @@
+<div class="container">
+    <span class="question">{{ quest.question }}</span>
+    <div class="answers">
+        <div>
+            <span [ngClass]="{'bold': isCorrect(1)}">{{ quest.answer1 }}</span>
+        </div>
+        <div>
+            <span [ngClass]="{'bold': isCorrect(2)}">{{ quest.answer2 }}</span>
+        </div>
+        <div>
+            <span [ngClass]="{'bold': isCorrect(3)}">{{ quest.answer3 }}</span>
+        </div>
+        <div>
+            <span [ngClass]="{'bold': isCorrect(4)}">{{ quest.answer4 }}</span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="poll-status">
+        <span>Status del poll: <b [innerHTML]="statusPoll"></b></span>
+    </div>
+    <div class="open-poll-section">
+        <div class="close-poll" *ngIf="statusPoll === 'Aperto' && !btnClicked">
+            <button (click)="closeAndGetResults()">Chiudi il poll e vedi risultati</button>
+        </div>
+        <div class="poll-results" *ngIf="pollResults">
+            <app-master-poll-results [pollResults]="pollResults"></app-master-poll-results>
+        </div>
+    </div>
+</div>

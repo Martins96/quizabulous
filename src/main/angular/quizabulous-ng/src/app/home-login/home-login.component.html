@@ -1,0 +1,13 @@
+<div class="container">
+  <form (ngSubmit)="submitLogin()" class="login-form">
+    <div class="form-container">
+      <label for="teamCode" class="form-title">Inserisci il codice partecipante</label>
+      <input type="text" id="teamCode" name="teamCode" [(ngModel)]="teamCode" />
+      <button type="submit">Login</button>
+    </div>
+  </form>
+</div>
+<div class="error" *ngIf="serverError">
+  <h1>Server Error, Aia! sentite lo sviluppatore (scarso)</h1>
+  <p>{{ serverErrorMsg }}</p>
+</div>

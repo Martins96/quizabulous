@@ -1,0 +1,58 @@
+div, span, input, button {
+    font-family: NormalText;
+    font-size: 1.1em;
+}
+
+.container {
+    box-shadow: 0 0 10px black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.triangle {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.triangle-svg {
+    transition-duration: 0.5s;
+    transition-property: transform;
+}
+
+.show-component {
+    display: flex;
+    border-radius: 5px;
+    background-color: lightgray;
+}
+
+.container {
+    animation-duration: 4s;
+}
+
+.contents {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.rotate-triangle {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+
+
+/* Nav menu */
+.navigation-menu {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.navigation-menu input {
+    max-width: 50px;
+    margin-right: 5px;
+}

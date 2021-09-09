@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="show-component" (click)="showHide()">
+        <span [innerHTML]="titleText()"></span>
+        <div class="triangle">
+            <svg height="15" width="15" class="triangle-svg" [ngClass]="{'rotate-triangle': !isVisible}">
+                <polygon points="6,1 2,10 10,10"/>
+                Sorry, your browser does not support inline SVG.
+          </svg>
+        </div>
+    </div>
+    <div class="contents" [ngClass]="{'hide': !isVisible}">
+        <button (click)="getResultScore()" class="refresh-btn">Refresh risultati</button>
+        <table>
+            <tr class="table-title">
+                <td><b>Nome</b></td>
+                <td><b>Punti</b></td>
+            </tr>
+            <tr class="competitor-results" *ngFor="let entry of resultMap | keyvalue">
+                <td class="competitor-name"><i>{{ entry.key }}</i></td>
+                <td class="competitor-points">{{ entry.value }}</td>
+            </tr>
+        </table>
+    </div>
+</div>

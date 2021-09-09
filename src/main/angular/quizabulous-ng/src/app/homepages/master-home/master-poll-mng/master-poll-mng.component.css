@@ -1,0 +1,31 @@
+label, span, div, input {
+    font-family: Subtitle;
+    font-size: 0.9em;
+}
+button {
+    font-family: NormalText;
+    font-size: 1.5em;
+}
+
+.container {
+    border: 2px dotted grey;
+    padding: 25px 0;
+    margin: 15px 0;
+}
+
+.container div {
+    margin: 10px 0;
+    width: 100%;
+}
+
+.close-poll button{
+    width: 100%;
+    padding: 5px 0;
+    border: none;
+    background-color: rgb(180, 20, 20);
+    color: white;
+}
+
+.close-poll button:active {
+    background-color: rgb(90, 20, 20);
+}

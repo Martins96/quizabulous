@@ -1,0 +1,7 @@
+<div class="container">
+    <h3>Ultimo poll</h3>
+    <div class="competitor-answers" *ngFor="let entry of resultMap | keyvalue">
+        <span class="competitor-name">{{ entry.key }}</span>
+        <span class="competitor-answer"><b>{{ entry.value }}</b></span>
+    </div>
+</div>
