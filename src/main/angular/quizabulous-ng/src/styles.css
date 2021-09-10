@@ -18,3 +18,14 @@ html, body {
     font-size: 1.2em;
     src: url("assets/fonts/Minitel.ttf");
 }
+
+.submit-btn {
+    width: 100%;
+    padding: 6px 8px;
+    text-align: center;
+    outline: none;
+    border-width: 4px;
+    margin: 10px 0;
+
+    transition: all linear 0.1s;
+}

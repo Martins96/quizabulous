@@ -29,7 +29,8 @@ export class MasterCustomQuestComponent {
 
 
   sendCustomQuest(): void {
-    if (!window.confirm("Sicuro di inviare e avviare la quest?")) {
+    if (!window.confirm("Sicuro di inviare e avviare la quest?\n" +
+        "Se non hai chiuso la precedente, la annullerai e perderai le risposte.")) {
       return;
     }
 

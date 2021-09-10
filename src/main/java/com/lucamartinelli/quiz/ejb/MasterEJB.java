@@ -9,6 +9,7 @@ import javax.inject.Inject;
 import org.jboss.logging.Logger;
 
 import com.lucamartinelli.quiz.cache.QuestInMemDB;
+import com.lucamartinelli.quiz.cache.SavedQuestLoaderCache;
 import com.lucamartinelli.quiz.cache.UserInMemDB;
 import com.lucamartinelli.quiz.utils.CheckData;
 import com.lucamartinelli.quiz.vo.QuestVO;
@@ -25,8 +26,18 @@ public class MasterEJB {
 			return false;
 		}
 		
-		QuestInMemDB.setActualQuest(quest);
-		QuestInMemDB.openPool();
+		new Thread(() -> {
+			startQuest(quest);
+		}).start();
+		return true;
+	}
+	
+	public boolean sendSavedQuest(final int id) {
+		final QuestVO quest = SavedQuestLoaderCache.getById(id);
+		
+		new Thread(() -> {
+			startQuest(quest);
+		}).start();
 		return true;
 	}
 	
@@ -34,6 +45,13 @@ public class MasterEJB {
 		QuestInMemDB.closePool();
 		Map<String, Integer> results = QuestInMemDB.getUserAnswers();
 		return results;
+	}
+	
+	private void startQuest(final QuestVO quest) {
+		QuestInMemDB.closePool();
+		QuestInMemDB.resetAnswers();
+		QuestInMemDB.setActualQuest(quest);
+		QuestInMemDB.openPool();
 	}
 	
 	

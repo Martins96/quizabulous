@@ -96,5 +96,13 @@ div, span, label, input, textarea, button {
 }
 
 .submit-btn {
-    margin: 10px auto;
+    background-color: lightskyblue;
+    border-color: lightsteelblue;
 }
+
+.submit-btn:active {
+    background-color: cornflowerblue;
+    border-color: steelblue;
+    font-weight: bold;
+}
+

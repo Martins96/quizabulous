@@ -35,3 +35,14 @@
 .login-form button {   
     font-family: Subtitle;
 }
+
+.version {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.75em;
+    padding: 1px;
+    position: absolute;
+    bottom:0;
+    right:0;
+    box-shadow: -1px -1px 5px black;
+    background-color: rgba(120, 120, 120, 0.5);
+}

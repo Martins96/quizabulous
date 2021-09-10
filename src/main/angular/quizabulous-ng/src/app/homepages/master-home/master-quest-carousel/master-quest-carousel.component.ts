@@ -106,4 +106,28 @@ export class MasterQuestCarouselComponent implements OnInit {
     return true;
   }
 
+  startQuest(): void {
+    if (!window.confirm("Sicuro di inviare e avviare la quest?\n" +
+        "Se non hai chiuso la precedente, la annullerai e perderai le risposte.")) {
+      return;
+    }
+    
+    const id = this.currentId - 1;
+    let getByIdUrl: string = "/master/start-saved-quest/" + id;
+    if (window.location.port === "4200")
+      getByIdUrl = "http://localhost/master/start-saved-quest/" + id;
+
+    this.rest.sendPut<QuestVO>(getByIdUrl, new HttpHeaders({
+      "Authorization": "Bearer " + this.jwt,
+      "Accept": "application/json"
+    })).subscribe(resp => {
+      this.questSelected = resp.body;
+    }, err => {
+      console.error(err)
+    })
+
+    this.questSelected = undefined;
+    this.currentId = 0;
+  }
+
 }

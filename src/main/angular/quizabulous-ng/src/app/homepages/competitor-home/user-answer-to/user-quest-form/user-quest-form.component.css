@@ -1,3 +1,8 @@
+div, span, button {
+    font-family: NormalText;
+    font-size: 1em;
+}
+
 .quest-text {
     margin: 5px 10px;
     border: 2px solid grey;
@@ -15,4 +20,15 @@
     margin: 15px 10px;
     padding: 1px;
     border: 1px solid lightgray;
+}
+
+.submit-btn {
+    background-color: lightskyblue;
+    border-color: lightsteelblue;
+}
+
+.submit-btn:active {
+    background-color: cornflowerblue;
+    border-color: steelblue;
+    font-weight: bold;
 }

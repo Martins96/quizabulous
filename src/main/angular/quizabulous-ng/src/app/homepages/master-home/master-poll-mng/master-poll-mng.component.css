@@ -19,9 +19,7 @@ button {
 }
 
 .close-poll button{
-    width: 100%;
-    padding: 5px 0;
-    border: none;
+    border-color: darkred;
     background-color: rgb(180, 20, 20);
     color: white;
 }

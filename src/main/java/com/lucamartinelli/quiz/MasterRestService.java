@@ -8,6 +8,7 @@ import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -81,24 +82,6 @@ public class MasterRestService {
 				.build();
 	}
 	
-	@GET
-	@Path("/get-quest-list")
-	@Produces(MediaType.APPLICATION_JSON)
-	public Response getQuestList() {
-		return Response
-				.status(501)
-				.build();
-	}
-	
-	@POST
-	@Path("/start-quest")
-	@Consumes(MediaType.TEXT_PLAIN)
-	public Response sendQuest(final int id) {
-		return Response
-				.status(501)
-				.build();
-	}
-	
 	
 	@GET
 	@Path("/get-scores")
@@ -150,6 +133,25 @@ public class MasterRestService {
 		}
 		
 		return Response.ok(quest).build();
+	}
+	
+	@PUT
+	@Path("/start-saved-quest/{id}")
+	public Response startSelectedQuest(@PathParam("id") String id) {
+		final int idNum = NumberUtils.toInt(id, -1);
+		if (idNum == -1) {
+			return Response.status(400).entity("Id must be an integer").build();
+		}
+		if (SavedQuestLoaderCache.count() <= idNum) {
+			return Response.status(400).entity("Id out of bound").build();
+		}
+		final boolean result = masterEJB.sendSavedQuest(idNum);
+		if (!result) {
+			return Response.status(400).build();
+		}
+		return Response
+				.noContent()
+				.build();
 	}
 	
 }

@@ -43,6 +43,19 @@ export class RestService {
 		});
 	}
 
+	sendPut<T>(url: string, headers?: HttpHeaders, body?: any): Observable<HttpResponse<T>> {
+		if (!body) {
+			body = "";
+		}
+		if (!headers) {
+			headers = new HttpHeaders();
+		}
+		return this.http.put<T>(url, body, {
+			headers,
+			observe: 'response'
+		});
+	}
+
 	getImage(url: string, headers: HttpHeaders): Observable<Blob> {
 		return this.http.get(url, { 
 			headers,

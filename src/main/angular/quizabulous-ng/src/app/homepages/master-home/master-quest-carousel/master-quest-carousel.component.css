@@ -56,3 +56,14 @@ div, span, input, button {
     max-width: 50px;
     margin-right: 5px;
 }
+
+.submit-btn {
+    background-color: lightskyblue;
+    border-color: lightsteelblue;
+}
+
+.submit-btn:active {
+    background-color: cornflowerblue;
+    border-color: steelblue;
+    font-weight: bold;
+}

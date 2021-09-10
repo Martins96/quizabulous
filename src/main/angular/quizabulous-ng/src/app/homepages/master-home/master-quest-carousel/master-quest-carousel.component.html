@@ -21,5 +21,8 @@
         <div class="carousel-elem" *ngIf="questSelected">
             <app-master-carousel-view [quest]="questSelected"></app-master-carousel-view>
         </div>
+        <div class="start-btn" *ngIf="questSelected">
+            <button (click)="startQuest()" class="submit-btn start-quest-btn">Seleziona questa quest</button>
+        </div>
     </div>
 </div>

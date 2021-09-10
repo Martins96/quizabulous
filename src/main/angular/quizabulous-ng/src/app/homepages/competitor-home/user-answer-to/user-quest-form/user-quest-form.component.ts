@@ -23,6 +23,11 @@ export class UserQuestFormComponent {
   constructor(private rest: RestService) { }
 
   submitAnswer(): void {
+    if (!this.answer) {
+      window.alert("Seleziona una risposta!");
+      return;
+    }
+
     if (!window.confirm("Hai selezionato la risposta " + this.answer + " confermi l'invio?")) {
       return;
     }
