@@ -1,9 +1,18 @@
 <div class="container">
   <form (ngSubmit)="submitLogin()" class="login-form">
+    <div class="wrapper-title">
+      <div class="border"></div>
+      <div class="main-element">
+        <h1>Quizabulous</h1>
+      </div>
+    </div>
     <div class="form-container">
       <label for="teamCode" class="form-title">Inserisci il codice partecipante</label>
       <input type="text" id="teamCode" name="teamCode" [(ngModel)]="teamCode" />
       <button type="submit">Login</button>
+      <div class="wrong-login" *ngIf="credentialsError">
+        <span>Credenziali errate</span>
+      </div>
     </div>
   </form>
 </div>

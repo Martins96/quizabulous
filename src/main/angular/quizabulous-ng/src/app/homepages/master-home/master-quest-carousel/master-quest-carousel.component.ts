@@ -65,7 +65,12 @@ export class MasterQuestCarouselComponent implements OnInit {
 
   getQuestSelected(): void {
     const id: number = Number(this.selectedId);
+    if (!id)
+      return;
+    
     this.getQuest(id);
+    this.currentId = id;
+    (<HTMLInputElement>document.getElementById("selectedId")).value = "";
   }
 
   getQuest(id: number): void {

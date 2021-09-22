@@ -38,3 +38,7 @@
 .exit-btn button:active {
     background-color: rgba(120, 120, 120);
 }
+
+.container {
+    margin-bottom: 75px;
+}

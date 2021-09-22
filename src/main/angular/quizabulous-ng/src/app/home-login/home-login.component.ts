@@ -13,6 +13,7 @@ export class HomeLoginComponent implements OnInit {
   teamCode: string;
 
   private error: string;
+  credentialsError: boolean = false;
   serverError: boolean = false;
   serverErrorMsg: string = null;
 
@@ -22,7 +23,8 @@ export class HomeLoginComponent implements OnInit {
   }
 
   submitLogin() {
-    this.serverError = true;
+    this.serverError = false;
+    this.credentialsError = false;
     this.serverErrorMsg = null;
     let loginUrl: string = "/login";
     if (window.location.port === "4200")
@@ -39,6 +41,9 @@ export class HomeLoginComponent implements OnInit {
       if (err.status >= 500){
         this.serverError = true;
         this.serverErrorMsg = err.message;
+      } else {
+        this.credentialsError = true;
+        this.teamCode = "";
       }
     })
   }

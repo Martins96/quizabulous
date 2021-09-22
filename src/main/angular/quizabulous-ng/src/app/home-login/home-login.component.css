@@ -4,6 +4,13 @@
     height: 100vh
 }
 
+h1 {
+    font-family: Title;
+    letter-spacing: 2px;
+    padding-top: 10px;
+    margin: 0;
+}
+
 .form-title {
     font-family: Title;
     font-size: 2em;
@@ -18,9 +25,9 @@
 }
 .form-container {
     display: grid;
-    padding: 5% 2%;
+    padding: 2%;
     background-color: rgba(120, 120, 120, 0.5);
-    width: fit-content;
+    width: 190px;
 }
 
 .login-form input,
@@ -36,6 +43,15 @@
     font-family: Subtitle;
 }
 
+.wrong-login {
+    font-family: NormalText;
+    font-size: 1.2em;
+    font-weight: bold;
+    width: 100%;
+    color: darkred;
+    text-align: center;
+}
+
 .version {
     font-family: 'Courier New', Courier, monospace;
     font-size: 0.75em;
@@ -46,3 +62,52 @@
     box-shadow: -1px -1px 5px black;
     background-color: rgba(120, 120, 120, 0.5);
 }
+
+
+
+/* Animation title */
+.wrapper-title {
+    text-align: center;
+    height: 45px;
+    padding: 1% 2%;
+    width: 190px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  
+  .main-element {
+    position: absolute;
+    top: 10%;
+    left: 1%;
+    display: block;
+    height: 78%;
+    width: 98%;
+    background: #fff;
+    z-index: 2;
+  }
+  
+  .border {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    z-index: 1;
+    height: 200%;
+    width: 200%;
+    overflow: hidden;
+    background: linear-gradient(to right, 
+        rgba(0, 0, 0, 0) 35%, 
+        rgba(120, 120, 120, 0.75) 50%,
+        rgba(0, 0, 0, 0) 65%);
+    background-size: 200% auto;
+    
+    animation: shine 3s linear infinite;
+  }
+  
+  /*Begin shimmer code*/
+  
+  @keyframes shine {
+      to {
+        background-position: 200% center;
+      }
+    }

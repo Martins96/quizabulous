@@ -34,7 +34,7 @@ public class LoginEJB {
 		
 		for(final String k : propFile.stringPropertyNames()) {
 			final String v = propFile.getProperty(k);
-			if (credential.equals(v)) {
+			if (credential.equalsIgnoreCase(v)) {
 				teamName = (String) k;
 				break;
 			}
